@@ -1,0 +1,495 @@
+{
+  "knowledge_base": [
+    {
+      "id": "KB-01",
+      "title": "Account Lockout & Password Reset Policy",
+      "description": "User accounts are locked after 5 consecutive failed login attempts. Automated manual unlock tool can be executed by IT agent after employee identity verification.",
+      "category": "Access"
+    },
+    {
+      "id": "KB-02",
+      "title": "VPN Access and Credential Renewal Policy",
+      "description": "Full-time employees receive VPN access with auto-grant upon 90-day renewal cycle. Contractors require manager approval via access request form prior to VPN provision or renewal.",
+      "category": "Access"
+    },
+    {
+      "id": "KB-03",
+      "title": "Hardware Refresh & Laptop Replacement Policy",
+      "description": "Laptops are eligible for replacement if device age > 3.0 years OR if there is a verified unrepairable hardware failure. Devices under 3.0 years with minor or fixable issues must be routed to hardware repair diagnostics first.",
+      "category": "Hardware"
+    },
+    {
+      "id": "KB-04",
+      "title": "Software Installation & Admin Access Policy",
+      "description": "Non-catalog software and browser extensions require IT Security review (3-5 business days turnaround). Admin access to critical servers (e.g., finance reporting) requires explicit business justification and manager sign-off.",
+      "category": "Software"
+    },
+    {
+      "id": "KB-05",
+      "title": "Printer & Peripheral Support Policy",
+      "description": "For printer errors or false jams, first attempt print spooler restart remotely. If issue persists, log a ticket with the printer's Asset Tag for physical technician dispatch.",
+      "category": "Hardware"
+    },
+    {
+      "id": "KB-06",
+      "title": "Mailbox Quota & Expansion Policy",
+      "description": "Default mailbox quota is 25GB. Users over quota should first archive old emails. Quota expansions above 25GB require manager approval and are strictly capped at 50GB max. Requests >50GB are unallowable per policy.",
+      "category": "Software"
+    },
+    {
+      "id": "KB-07",
+      "title": "Guest Wi-Fi Access Policy",
+      "description": "Guest Wi-Fi credentials (24-hour pass) are self-service via front-desk kiosks in office lobbies. No IT helpdesk ticket is required.",
+      "category": "Access"
+    },
+    {
+      "id": "KB-08",
+      "title": "Finance & Expense Tool Support Policy",
+      "description": "Expense software user accounts and permissions are managed directly by the Finance team. IT only assists with login issues if an account already exists in Finance. If no account exists, route to Finance immediately.",
+      "category": "Software"
+    },
+    {
+      "id": "KB-09",
+      "title": "Phishing & Security Incident Escalation",
+      "description": "Suspected phishing emails or security threats must be reported immediately to security@veridian-corp.example. Employees must NOT forward suspicious emails to colleagues.",
+      "category": "Security"
+    },
+    {
+      "id": "KB-10",
+      "title": "Work From Home (WFH) Equipment Allowance",
+      "description": "Employees working WFH > 3 days per week are eligible for home monitors/peripherals. Requires Manager approval sign-off and Finance budget code processing.",
+      "category": "Hardware"
+    }
+  ],
+  "historical_tickets": [
+    {
+      "ticket_id": "TK-1042",
+      "employee_email": "karan.mehta@veridian-corp.example",
+      "category": "ACCESS_LOCKOUT",
+      "issue_type": "account_lockout",
+      "summary": "User locked out after 6 failed attempts",
+      "resolution": "Account unlocked via IT unlock tool after identity verification.",
+      "status": "RESOLVED",
+      "precedent_note": "Direct automated unlock executed per KB-01."
+    },
+    {
+      "ticket_id": "TK-1043",
+      "employee_email": "vikram.chawla@veridian-corp.example",
+      "category": "ACCESS_GUEST_WIFI",
+      "issue_type": "guest_wifi",
+      "summary": "Guest Wi-Fi pass requested for visiting vendor",
+      "resolution": "Directed employee to lobby kiosk self-service.",
+      "status": "RESOLVED",
+      "precedent_note": "Self-service kiosk direction per KB-07."
+    },
+    {
+      "ticket_id": "TK-1044",
+      "employee_email": "ritu.bhatia@veridian-corp.example",
+      "category": "SOFTWARE_INSTALLATION",
+      "issue_type": "software_installation",
+      "summary": "Non-catalog software GraphViz-Pro requested",
+      "resolution": "Routed to IT Security Review (3-5 days).",
+      "status": "PENDING_SECURITY",
+      "precedent_note": "Non-catalog software requires security assessment per KB-04."
+    },
+    {
+      "ticket_id": "TK-1045",
+      "employee_email": "aditi.sharma@veridian-corp.example",
+      "category": "HARDWARE_LAPTOP",
+      "issue_type": "hardware_failure",
+      "summary": "Laptop 3.5 yrs old dead screen",
+      "resolution": "Laptop 3.5 yrs old approved for replacement.",
+      "status": "APPROVED",
+      "precedent_note": "Age >3.0 yrs meets refresh threshold per KB-03."
+    },
+    {
+      "ticket_id": "TK-1046",
+      "employee_email": "sanjay.oberoi@veridian-corp.example",
+      "category": "ACCESS_VPN",
+      "issue_type": "vpn_access",
+      "summary": "90-day VPN credential expired",
+      "resolution": "VPN credentials auto-renewed for 90 days.",
+      "status": "RESOLVED",
+      "precedent_note": "Full-time employee auto-renewed per KB-02."
+    },
+    {
+      "ticket_id": "TK-1047",
+      "employee_email": "meera.iyer@veridian-corp.example",
+      "category": "HARDWARE_PRINTER",
+      "issue_type": "printer_malfunction",
+      "summary": "3rd floor printer paper jam false error",
+      "resolution": "Spooler restarted; technician dispatched with asset tag PRN-301.",
+      "status": "ROUTED",
+      "precedent_note": "Printer asset tag required for field technician dispatch per KB-05."
+    },
+    {
+      "ticket_id": "TK-1048",
+      "employee_email": "farhan.ali@veridian-corp.example",
+      "category": "HARDWARE_WFH",
+      "issue_type": "wfh_equipment",
+      "summary": "WFH 4 days monitor request",
+      "resolution": "Routed to Manager and Finance for budget sign-off.",
+      "status": "PENDING_APPROVAL",
+      "precedent_note": "WFH >3 days eligible subject to Manager + Finance approval per KB-10."
+    },
+    {
+      "ticket_id": "TK-1049",
+      "employee_email": "rohit.desai@veridian-corp.example",
+      "category": "SOFTWARE_MAILBOX",
+      "issue_type": "mailbox_quota",
+      "summary": "Mailbox reached 25GB quota limit",
+      "resolution": "Archiving instructions provided; quota expansion routed to manager (max 50GB cap).",
+      "status": "ROUTED",
+      "precedent_note": "Expansions capped at 50GB max per KB-06."
+    },
+    {
+      "ticket_id": "TK-1050",
+      "employee_email": "j.fernandes@veridian-corp.example",
+      "category": "ACCESS_ADMIN",
+      "issue_type": "admin_access_request",
+      "summary": "Admin Access Request on Finance Reporting Server",
+      "resolution": "Routed for explicit business justification and Manager + Finance sign-off.",
+      "status": "PENDING_APPROVAL",
+      "precedent_note": "Admin access requires business justification & manager sign-off per KB-04."
+    },
+    {
+      "ticket_id": "TK-1051",
+      "employee_email": "ananya.reddy@veridian-corp.example",
+      "category": "SECURITY_THREAT",
+      "issue_type": "security_threat",
+      "summary": "Phishing email reported",
+      "resolution": "Security alert raised, employee instructed not to forward.",
+      "status": "RESOLVED",
+      "precedent_note": "Phishing threats escalated immediately to SOC per KB-09."
+    }
+  ],
+  "requests": [
+    {
+      "request_id": "REQ-01",
+      "employee": {
+        "name": "Aditi Sharma",
+        "email": "aditi.sharma@veridian-corp.example",
+        "role": "Senior Product Analyst",
+        "is_contractor": false,
+        "tenure_years": 4.0
+      },
+      "issue_description": "My laptop screen went completely black and it won't power on at all. The laptop is around 3.5 years old.",
+      "extracted_entities": {
+        "device_type": "laptop",
+        "device_age_years": 3.5,
+        "is_completely_dead": true,
+        "issue_type": "hardware_failure"
+      },
+      "expected_decision": {
+        "status": "APPROVED",
+        "action_type": "INITIATE_REPLACEMENT",
+        "routing_target": "IT_HARDWARE_DISPATCH",
+        "kb_rule": "KB-03"
+      }
+    },
+    {
+      "request_id": "REQ-02",
+      "employee": {
+        "name": "Vikram Chawla",
+        "email": "vikram.chawla@veridian-corp.example",
+        "role": "Operations Manager",
+        "is_contractor": false,
+        "tenure_years": 2.5
+      },
+      "issue_description": "I have a vendor visiting our office tomorrow. Can IT grant them Wi-Fi access for the day?",
+      "extracted_entities": {
+        "request_type": "guest_wifi",
+        "target_user": "vendor_guest"
+      },
+      "expected_decision": {
+        "status": "RESOLVE",
+        "action_type": "PROVIDE_KIOSK_INSTRUCTIONS",
+        "routing_target": "SELF_SERVICE",
+        "kb_rule": "KB-07"
+      }
+    },
+    {
+      "request_id": "REQ-03",
+      "employee": {
+        "name": "Karan Mehta",
+        "email": "karan.mehta@veridian-corp.example",
+        "role": "Software Engineer",
+        "is_contractor": false,
+        "tenure_years": 1.5
+      },
+      "issue_description": "I tried entering my password 6 times incorrectly after returning from vacation and now my account is locked out.",
+      "extracted_entities": {
+        "failed_attempts": 6,
+        "issue_type": "account_lockout"
+      },
+      "expected_decision": {
+        "status": "RESOLVE",
+        "action_type": "UNLOCK_USER_ACCOUNT",
+        "routing_target": "AUTOMATED_ACTION",
+        "kb_rule": "KB-01"
+      }
+    },
+    {
+      "request_id": "REQ-04",
+      "employee": {
+        "name": "Ritu Bhatia",
+        "email": "ritu.bhatia@veridian-corp.example",
+        "role": "Data Scientist",
+        "is_contractor": false,
+        "tenure_years": 3.0
+      },
+      "issue_description": "I need approval to install a non-catalog data modeling tool 'GraphViz-Pro' for my research project.",
+      "extracted_entities": {
+        "software_name": "GraphViz-Pro",
+        "is_catalog_software": false,
+        "issue_type": "software_installation"
+      },
+      "expected_decision": {
+        "status": "ROUTE",
+        "action_type": "ESCALATE_TO_SECURITY_REVIEW",
+        "routing_target": "IT_SECURITY_REVIEW",
+        "kb_rule": "KB-04"
+      }
+    },
+    {
+      "request_id": "REQ-05",
+      "employee": {
+        "name": "Sanjay Oberoi",
+        "email": "sanjay.oberoi@veridian-corp.example",
+        "role": "Marketing Lead",
+        "is_contractor": false,
+        "tenure_years": 2.0
+      },
+      "issue_description": "My VPN connection keeps failing today. Error message says credentials expired after 90 days.",
+      "extracted_entities": {
+        "error_type": "credentials_expired",
+        "issue_type": "vpn_access"
+      },
+      "expected_decision": {
+        "status": "RESOLVE",
+        "action_type": "RENEW_VPN_CREDENTIALS",
+        "routing_target": "AUTOMATED_ACTION",
+        "kb_rule": "KB-02"
+      }
+    },
+    {
+      "request_id": "REQ-06",
+      "employee": {
+        "name": "Meera Iyer",
+        "email": "meera.iyer@veridian-corp.example",
+        "role": "HR Business Partner",
+        "is_contractor": false,
+        "tenure_years": 5.0
+      },
+      "issue_description": "The 3rd floor printer is showing a false 'paper jam' error even though paper tray is empty and clear. Asset tag is PRN-301.",
+      "extracted_entities": {
+        "location": "3rd floor",
+        "asset_tag": "PRN-301",
+        "device": "printer",
+        "error_message": "paper jam",
+        "issue_type": "printer_malfunction"
+      },
+      "expected_decision": {
+        "status": "ROUTE",
+        "action_type": "RESTART_SPOOLER_AND_DISPATCH",
+        "routing_target": "IT_FIELD_SUPPORT",
+        "kb_rule": "KB-05"
+      }
+    },
+    {
+      "request_id": "REQ-07",
+      "employee": {
+        "name": "Farhan Ali",
+        "email": "farhan.ali@veridian-corp.example",
+        "role": "Financial Analyst",
+        "is_contractor": false,
+        "tenure_years": 1.0
+      },
+      "issue_description": "I work from home 4 days a week. Can I get an external 27-inch monitor delivered to my home address?",
+      "extracted_entities": {
+        "wfh_days_per_week": 4,
+        "requested_item": "external_monitor",
+        "issue_type": "wfh_equipment"
+      },
+      "expected_decision": {
+        "status": "ROUTE",
+        "action_type": "ROUTE_TO_FINANCE_AND_MANAGER",
+        "routing_target": "MANAGER_AND_FINANCE_APPROVAL",
+        "kb_rule": "KB-10"
+      }
+    },
+    {
+      "request_id": "REQ-08",
+      "employee": {
+        "name": "Ananya Reddy",
+        "email": "ananya.reddy@veridian-corp.example",
+        "role": "UX Researcher",
+        "is_contractor": false,
+        "tenure_years": 0.8
+      },
+      "issue_description": "I received an urgent email asking me to verify password on a weird link. I forwarded it to my team to ask if it's legit.",
+      "extracted_entities": {
+        "forwarded_to_team": true,
+        "is_phishing_suspected": true,
+        "issue_type": "security_threat"
+      },
+      "expected_decision": {
+        "status": "ROUTE",
+        "action_type": "ESCALATE_PHISHING_ALERT",
+        "routing_target": "SECURITY_INCIDENT_TEAM",
+        "kb_rule": "KB-09"
+      }
+    },
+    {
+      "request_id": "REQ-09",
+      "employee": {
+        "name": "Rohit Desai",
+        "email": "rohit.desai@veridian-corp.example",
+        "role": "Account Executive",
+        "is_contractor": false,
+        "tenure_years": 3.2
+      },
+      "issue_description": "My mailbox is completely full (reached 25GB quota) and I cannot send out pitch decks to clients. Can I expand to 35GB?",
+      "extracted_entities": {
+        "current_mailbox_size_gb": 25,
+        "requested_mailbox_size_gb": 35,
+        "issue_type": "mailbox_quota"
+      },
+      "expected_decision": {
+        "status": "ROUTE",
+        "action_type": "REQUEST_QUOTA_APPROVAL",
+        "routing_target": "MANAGER_APPROVAL_WORKFLOW",
+        "kb_rule": "KB-06"
+      }
+    },
+    {
+      "request_id": "REQ-10",
+      "employee": {
+        "name": "Kavya Pillai",
+        "email": "kavya.pillai@veridian-corp.example",
+        "role": "Senior Accountant",
+        "is_contractor": false,
+        "tenure_years": 4.5
+      },
+      "issue_description": "I need urgent admin privileges on the central finance reporting server to generate quarter-end audits.",
+      "extracted_entities": {
+        "target_system": "finance_reporting_server",
+        "access_level": "admin",
+        "issue_type": "admin_access_request"
+      },
+      "expected_decision": {
+        "status": "ROUTE",
+        "action_type": "ROUTE_FOR_APPROVAL_AND_JUSTIFICATION",
+        "routing_target": "FINANCE_SECURITY_MANAGER",
+        "kb_rule": "KB-04"
+      }
+    },
+    {
+      "request_id": "REQ-11",
+      "employee": {
+        "name": "Nikhil Bansal",
+        "email": "nikhil.bansal@veridian-corp.example",
+        "role": "Project Coordinator",
+        "is_contractor": true,
+        "tenure_years": 0.3
+      },
+      "issue_description": "I am a contractor joining project Titan next week and need VPN access set up for my onboarding.",
+      "extracted_entities": {
+        "is_contractor": true,
+        "issue_type": "vpn_access"
+      },
+      "expected_decision": {
+        "status": "ROUTE",
+        "action_type": "ROUTE_TO_MANAGER",
+        "routing_target": "MANAGER_APPROVAL_FORM",
+        "kb_rule": "KB-02"
+      }
+    },
+    {
+      "request_id": "REQ-12",
+      "employee": {
+        "name": "Sneha Kulkarni",
+        "email": "sneha.kulkarni@veridian-corp.example",
+        "role": "Talent Specialist",
+        "is_contractor": false,
+        "tenure_years": 1.2
+      },
+      "issue_description": "I cannot log into the expense portal; it says 'invalid credentials'. I am waiting on my account setup.",
+      "extracted_entities": {
+        "target_system": "expense_portal",
+        "issue_type": "expense_tool"
+      },
+      "expected_decision": {
+        "status": "ROUTE",
+        "action_type": "REDIRECT_TO_FINANCE",
+        "routing_target": "FINANCE_HELPDESK",
+        "kb_rule": "KB-08"
+      }
+    },
+    {
+      "request_id": "REQ-13",
+      "employee": {
+        "name": "Aman Gupta",
+        "email": "aman.gupta@veridian-corp.example",
+        "role": "DevOps Engineer",
+        "is_contractor": false,
+        "tenure_years": 2.0
+      },
+      "issue_description": "My laptop screen flickers occasionally when plugged into external power. The device is 2 years old. Please repair it.",
+      "extracted_entities": {
+        "device_type": "laptop",
+        "device_age_years": 2.0,
+        "is_completely_dead": false,
+        "issue_type": "hardware_minor"
+      },
+      "expected_decision": {
+        "status": "ROUTE",
+        "action_type": "ROUTE_TO_HARDWARE_REPAIR",
+        "routing_target": "IT_HARDWARE_REPAIR",
+        "kb_rule": "KB-03"
+      }
+    },
+    {
+      "request_id": "REQ-14",
+      "employee": {
+        "name": "Tanya Chopra",
+        "email": "tanya.chopra@veridian-corp.example",
+        "role": "Content Strategist",
+        "is_contractor": false,
+        "tenure_years": 1.8
+      },
+      "issue_description": "I would like approval to install Chrome browser extension 'TimeTracker Pro' for measuring task velocity.",
+      "extracted_entities": {
+        "software_name": "TimeTracker Pro",
+        "is_browser_extension": true,
+        "issue_type": "browser_extension"
+      },
+      "expected_decision": {
+        "status": "ROUTE",
+        "action_type": "ESCALATE_TO_SECURITY_REVIEW",
+        "routing_target": "IT_SECURITY_REVIEW",
+        "kb_rule": "KB-04"
+      }
+    },
+    {
+      "request_id": "REQ-15",
+      "employee": {
+        "name": "Rahul Menon",
+        "email": "rahul.menon@veridian-corp.example",
+        "role": "QA Analyst",
+        "is_contractor": false,
+        "tenure_years": 0.5
+      },
+      "issue_description": "hey can you help, its not working",
+      "extracted_entities": {
+        "issue_type": "ambiguous"
+      },
+      "expected_decision": {
+        "status": "CLARIFY",
+        "action_type": "REQUEST_EMPLOYEE_CLARIFICATION",
+        "routing_target": "EMPLOYEE_FEEDBACK",
+        "kb_rule": "Baseline Security Protocol"
+      }
+    }
+  ]
+}
