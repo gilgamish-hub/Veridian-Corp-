@@ -1,13 +1,13 @@
 # System Architecture & Control Flow Blueprint
 **Project:** Veridian Corp Internal IT Support Agent  
-**Environment / Engine:** Antigravity Agent Framework  
+**Implementation:** Python, Pydantic, Streamlit (no external agent framework)  
 **Simulated Period:** 21 Sep 2026 – 25 Sep 2026  
 
 ---
 
 ## 1. High-Level Architecture Overview
 
-The Veridian IT Support Agent uses a **Deterministic Hybrid Control Pipeline**. To ensure 100% policy compliance and zero hallucination, LLMs are not allowed to make ungrounded decisions. Instead, the system uses LLMs for entity extraction, semantic intent parsing, and natural response generation, while business logic execution is strictly handled by a deterministic State Engine.
+The Veridian IT Support Agent uses a **rule-based control pipeline**. Every decision must be traceable to a written policy, so business decisions are made by a deterministic rule engine, never by a language model. In the current implementation, intent and entities are also parsed with keyword and regular-expression rules, and responses are built from templates. An LLM could later take over parsing and wording without touching the decision logic.
 
 ```
 ┌──────────────────────────────────────────────────────────────────────────┐
@@ -53,7 +53,7 @@ The Veridian IT Support Agent uses a **Deterministic Hybrid Control Pipeline**. 
 
 ## 2. Core State Schema
 
-The entire state machine operates on a unified, strongly typed JSON state object passed between Antigravity nodes:
+The entire state machine operates on a unified, strongly typed JSON state object passed between the five pipeline stages:
 
 ```json
 {

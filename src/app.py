@@ -87,7 +87,7 @@ def get_engine():
 engine = get_engine()
 
 st.markdown('<div class="main-header">🛡️ Veridian Corp — Internal IT Support Agent</div>', unsafe_allow_html=True)
-st.markdown('<div class="sub-header">Deterministic-First Hybrid Control Pipeline | Antigravity Framework</div>', unsafe_allow_html=True)
+st.markdown('<div class="sub-header">Rule-based 5-stage pipeline · Pydantic · Streamlit</div>', unsafe_allow_html=True)
 
 tab1, tab2, tab3, tab4 = st.tabs([
     "📋 Evaluation Requests (REQ-01 to REQ-15)", 
