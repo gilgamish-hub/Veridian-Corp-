@@ -1,6 +1,6 @@
 # 🛡️ IT Support Agent: a rule-based policy engine
 
-[![tests](https://github.com/gilgamish-hub/Veridian-Corp-/actions/workflows/tests.yml/badge.svg)](https://github.com/gilgamish-hub/Veridian-Corp-/actions/workflows/tests.yml)
+[![tests](https://github.com/gilgamish-hub/it-support-agent/actions/workflows/tests.yml/badge.svg)](https://github.com/gilgamish-hub/it-support-agent/actions/workflows/tests.yml)
 ![Python](https://img.shields.io/badge/Python-3.11-blue)
 ![Pydantic](https://img.shields.io/badge/Pydantic-v2-e92063)
 ![Streamlit](https://img.shields.io/badge/Streamlit-app-ff4b4b)
@@ -43,8 +43,8 @@ The rules were written for these 15 scenarios, so 15/15 shows the rules do what 
 ## Run it
 
 ```bash
-git clone https://github.com/gilgamish-hub/Veridian-Corp-.git
-cd Veridian-Corp-
+git clone https://github.com/gilgamish-hub/it-support-agent.git
+cd it-support-agent
 pip install -r requirements.txt
 
 streamlit run src/app.py      # the web app
